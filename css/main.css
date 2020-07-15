@@ -1,14 +1,13 @@
 :root {
     /* Colors Primary */
     --ColorWhite: hsl(0, 0%, 100%);
-    --ColorLight: hsl(229, 44%, 88%);
+    --ColorLight: hsl(229, 30%, 74%);
     --LimeGreen: hsl(163, 72%, 41%);
     --BrightRed: hsl(356, 69%, 56%);
     --Facebook: hsl(195, 100%, 50%);
     --Twitter: hsl(203, 89%, 53%);
     --YouTube: hsl(348, 97%, 39%);
-    --Instagram: linear-gradient(hsl(37, 97%, 70%),
-                             hsl(329, 70%, 58%));
+    --Instagram: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
     
 
     /* Dark Theme */
