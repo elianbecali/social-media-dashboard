@@ -14,7 +14,8 @@
     /* Dark Theme */
     --ToggleBtnDark: linear-gradient(to right,hsl(210, 78%, 56%),
     hsl(146, 68%, 55%));
-    --BgDark: hsl(228, 28%, 20%);
+    --BgDark: hsl(230, 17%, 14%);
+    --BgDarkCard: hsl(228, 28%, 20%);
 
     /* Light Theme */
     --ToggleBtnLight: hsl(230, 22%, 74%);
