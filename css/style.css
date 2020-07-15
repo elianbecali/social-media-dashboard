@@ -2,5 +2,38 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3em 0;
+    padding: 2.5em 0;
+}
+header .title-box .title {
+    color: var(--ColorWhite);
+}
+header .title-box p {
+    color: var(--ColorLight);
+    font-weight: 700;
+}
+header .toggle-mode {
+    display: flex;
+    align-items: center;
+    color: var(--ColorLight);
+    font-weight: 700;
+    font-size: 16px;
+}
+header .toggle-mode input[type=checkbox] {
+    -webkit-appearance: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 100px;
+    margin-left: 20px;
+    background: var(--ToggleBtnDark);
+    position: relative;
+}
+header .toggle-mode input[type=checkbox]::before {
+    content: '';
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    transform: scale(0.8);
+    background: var(--BgDark);
+    transition: background 0.3s;
+    position: absolute;
 }
