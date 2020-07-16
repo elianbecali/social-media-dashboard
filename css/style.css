@@ -39,19 +39,26 @@ header .toggle-mode input[type=checkbox]::before {
     transition: background 0.3s;
     position: absolute;
 }
-main .followers {
+main .followers,
+main .grid-overview {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
 }
-main .followers .card {
+main .followers .card,
+main .grid-overview .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 0;
     border-radius: 8px;
+    cursor: pointer;
     background: var(--BgDarkCard);
     position: relative;
+}
+main .followers .card:hover,
+main .grid-overview .card:hover {
+    filter: brightness(140%);
 }
 main .followers .card::before {
     content: '';
@@ -109,4 +116,48 @@ main .followers .card .username img {
 }
 .card span img {
     margin-right: 5px;
+}
+main .overview {
+    margin-top: 50px;
+}
+main .overview h2 {
+    color: var(--ColorWhite);
+    font-size: 1.7em;
+}
+main .grid-overview {
+    margin: 20px 0;
+}
+main .grid-overview .card {
+    padding: 30px;
+}
+main .grid-overview .card .title-card {
+    margin-bottom: 20px;
+}
+main .grid-overview .card .title-card span {
+    font-size: 1.1em;
+    color: var(--ColorLight);
+}
+main .grid-overview .card .title-card,
+main .grid-overview .card .text-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+main .grid-overview .card .text-card {
+    align-items: baseline;
+}
+main .grid-overview .card .text-card p {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--ColorWhite);
+}
+main .grid-overview .card .text-card span {
+    display: flex;
+    align-items: center;
+    color: var(--LimeGreen);
+    font-weight: 700;
+}
+main .grid-overview .card .text-card span.down {
+    color: var(--BrightRed);
 }
