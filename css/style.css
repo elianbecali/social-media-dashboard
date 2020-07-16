@@ -5,16 +5,17 @@ header {
     padding: 2.5em 0;
 }
 header .title-box .title {
-    color: var(--ColorWhite);
+    color: var(--ColorDark);
+    transition: 0.3s;
 }
 header .title-box p {
-    color: var(--ColorLight);
+    color: var(--ColorDarkLight);
     font-weight: 700;
 }
 header .toggle-mode {
     display: flex;
     align-items: center;
-    color: var(--ColorWhite);
+    color: var(--ColorDarkLight);
     font-weight: 700;
     font-size: 16px;
 }
@@ -25,6 +26,7 @@ header .toggle-mode input[type=checkbox] {
     border-radius: 100px;
     margin-left: 20px;
     background: var(--ToggleBtnDark);
+    transition: background 0.3s;
     cursor: pointer;
     outline: 0;
     position: relative;
@@ -34,10 +36,13 @@ header .toggle-mode input[type=checkbox]::before {
     height: 40px;
     width: 40px;
     border-radius: 50px;
-    transform: scale(0.8);
-    background: var(--BgDark);
-    transition: background 0.3s;
+    transform: translateX(50px) scale(0.8);
+    background: var(--BgLight);
+    transition: transform 0.3s, background 0.3s;
     position: absolute;
+}
+header .toggle-mode input[type=checkbox]:checked::before {
+    transform: translateX(0) scale(0.8);
 }
 main .followers,
 main .grid-overview {
@@ -53,12 +58,13 @@ main .grid-overview .card {
     padding: 30px 0;
     border-radius: 8px;
     cursor: pointer;
-    background: var(--BgDarkCard);
+    background: var(--BgLightCard);
+    transition: background 0.2s;
     position: relative;
 }
 main .followers .card:hover,
 main .grid-overview .card:hover {
-    filter: brightness(140%);
+    background: var(--BgLightCardHover);
 }
 main .followers .card::before {
     content: '';
@@ -84,7 +90,7 @@ main .followers .card.youtube::before {
 main .followers .card .username {
     display: flex;
     justify-content: center;
-    color: var(--ColorLight);
+    color: var(--ColorDarkLight);
 }
 main .followers .card .username img {
     margin-right: 10px;
@@ -98,13 +104,14 @@ main .followers .card .username img {
     font-weight: 400;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: var(--ColorLight);
+    color: var(--ColorDarkLight);
 }
 .card .count-follow span {
     font-size: 4em;
     font-weight: 700;
     letter-spacing: 0;
-    color: var(--ColorWhite);
+    color: var(--ColorDark);
+    transition: 0.3s
 }
 .card span {
     display: flex;
@@ -121,7 +128,7 @@ main .overview {
     margin-top: 50px;
 }
 main .overview h2 {
-    color: var(--ColorWhite);
+    color: var(--ColorDark);
     font-size: 1.7em;
 }
 main .grid-overview {
@@ -135,7 +142,7 @@ main .grid-overview .card .title-card {
 }
 main .grid-overview .card .title-card span {
     font-size: 1.1em;
-    color: var(--ColorLight);
+    color: var(--ColorDarkLight);
 }
 main .grid-overview .card .title-card,
 main .grid-overview .card .text-card {
@@ -150,7 +157,7 @@ main .grid-overview .card .text-card {
 main .grid-overview .card .text-card p {
     font-size: 2.8em;
     font-weight: 700;
-    color: var(--ColorWhite);
+    color: var(--ColorDark);
 }
 main .grid-overview .card .text-card span {
     display: flex;
@@ -166,9 +173,12 @@ footer.attribution {
     text-align: center;
     font-size: 1em;
     font-weight: 400;
-    color: var(--ColorLight);
+    color: var(--ColorDarkLight);
+    transition: 0.3s;
 }
 footer.attribution a {
-    color: var(--ColorWhite);
+    color: var(--ColorDark);
     text-decoration: none;
+    transition: 0.3s;
 }
+

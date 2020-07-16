@@ -1,7 +1,5 @@
 :root {
     /* Colors Primary */
-    --ColorWhite: hsl(0, 0%, 100%);
-    --ColorLight: hsl(229, 30%, 74%);
     --LimeGreen: hsl(163, 72%, 41%);
     --BrightRed: hsl(356, 69%, 56%);
     --Facebook: hsl(195, 100%, 50%);
@@ -9,15 +7,25 @@
     --YouTube: hsl(348, 97%, 39%);
     --Instagram: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
     
-
     /* Dark Theme */
+    --ToggleBtnDark: hsl(230, 22%, 74%); 
+    /* Light Theme */
+    --BgLight: hsl(0, 0%, 100%);
+    --BgLightTop: hsl(225, 100%, 98%);
+    --BgLightCard: hsl(227, 47%, 96%);
+    --BgLightCardHover: hsl(227, 32%, 86%);
+    --ColorDark: hsl(230, 17%, 14%);
+    --ColorDarkLight: hsl(228, 12%, 44%);
+}
+body.dark {
     --ToggleBtnDark: linear-gradient(to right,hsl(210, 78%, 56%),
     hsl(146, 68%, 55%));
-    --BgDark: hsl(230, 17%, 14%);
-    --BgDarkCard: hsl(228, 28%, 20%);
-
-    /* Light Theme */
-    --ToggleBtnLight: hsl(230, 22%, 74%);
+    --ColorDark: hsl(0, 0%, 100%);
+    --ColorDarkLight: hsl(228, 34%, 66%);
+    --BgLightCard: hsl(228, 28%, 20%);
+    --BgLightCardHover: hsl(228, 26%, 26%);
+    --BgLight: hsl(230, 17%, 14%);
+    --BgLightTop: hsl(232, 19%, 15%);
 }
 
 * {
@@ -28,7 +36,19 @@
 body {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    background-color: var(--BgDark);
+    background: var(--BgLightTop);
+    transition: background 0.3s;
+}
+body::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 250px;
+    bottom: 0;
+    z-index: -1;
+    bottom: 0;
+    background: var(--BgLight);
 }
 body .container {
     padding: 0 10%;
