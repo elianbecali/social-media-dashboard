@@ -14,7 +14,7 @@ header .title-box p {
 header .toggle-mode {
     display: flex;
     align-items: center;
-    color: var(--ColorLight);
+    color: var(--ColorWhite);
     font-weight: 700;
     font-size: 16px;
 }
@@ -160,4 +160,15 @@ main .grid-overview .card .text-card span {
 }
 main .grid-overview .card .text-card span.down {
     color: var(--BrightRed);
+}
+
+footer.attribution {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--ColorLight);
+}
+footer.attribution a {
+    color: var(--ColorWhite);
+    text-decoration: none;
 }
