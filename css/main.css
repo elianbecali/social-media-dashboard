@@ -51,5 +51,6 @@ body::after {
     background: var(--BgLight);
 }
 body .container {
-    padding: 0 10%;
+    max-width: 90%;
+    margin: 0 auto;
 }
